@@ -3,30 +3,25 @@
 int main()
 
 {
-int row;
+    char arrchar[10] = {'d','p','+','*','A','5','g','7','`','A'};
+    int i;
+    int count =0;
 
-    for (row = 1; row <8; row++)
+    for (i=0; i<10; i++)
+    {
+        if (arrchar[i]=='A') break; //65 ASCII
         {
-            if (row<2)
-                {
-                    printf("  *\n");
-                }
-            else if (row>1 && row<3)
-                {
-                    printf(" * *\n");
-                } 
-            else if (row>2 && row<6)
-                {
-                    printf("*   *\n");
-                }
-            else if (row>5 && row<7)
-                {
-                    printf(" * *\n");
-                }
-            else
-                {
-                    printf("  *\n");
-                }
-        }
+            count+=1;
+        }                         
+    }
+
+    if (count < 10)
+    {
+        printf("The letter 'A' is found for the first time at [%dth] position!\n", count);
+    }
+    else 
+    {
+        printf("The is no such a letter in the array!\n");
+    }
 return 0;
 }

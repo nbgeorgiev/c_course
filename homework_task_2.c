@@ -3,17 +3,17 @@
 int main()
 
 {
-    int n;
-    int sum = 0;
+    int arr[10] = {10,1,23,22,6,56,8,9,77,56};
     int i;
-    printf("Please input number:\n");
-    scanf("%d", &n);
-        
-        for (i = 0; i < n; i++)
-        {
-            sum = sum +i*i;
-        }
-    printf("%d\n", sum);    
+    int count = 0;
+
+    for (i=0; i<10; i++)
+    {
+        if (arr[i]>=10 && arr[i]<100)
+            count+=1;
+            
+    }
+    printf("There are %d double digit numbers in the array!\n", count);
 
 return 0;
 }
